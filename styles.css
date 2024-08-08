@@ -6,7 +6,7 @@ body {
     font-family: 'Gupter', serif;
     font-weight: 500;
     font-style: normal;
-    background-color: #f4f4f4;
+    background-color: #1a1a1a; /* Fondo gris muy oscuro para diferenciarse del negro puro */
     margin: 0;
     padding: 0;
 }
@@ -18,10 +18,10 @@ body {
 }
 
 header {
-    background: #358b32;
-    color: #fff;
+    background: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     padding: 20px 0;
-    border-bottom: #558b2f 3px solid;
+    border-bottom: #d4af37 3px solid; /* Borde dorado */
 }
 
 header h1 {
@@ -32,6 +32,8 @@ header h1 {
     margin: 0;
     padding: 0;
     text-align: center;
+    color: #d4af37; /* Color dorado para el título */
+    text-shadow:0 0 2.6rem #FFD700;
 }
 
 nav {
@@ -44,8 +46,8 @@ nav ul {
     padding: 0;
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario */
-    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
@@ -54,18 +56,21 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Texto blanco */
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
-    display: block; /* Asegura que los enlaces sean bloques para facilitar el ajuste en pantallas pequeñas */
+    display: block;
     padding: 10px;
+}
+nav ul li :hover {
+    color: #d4af37; /* Color dorado para el título */
 }
 
 #sobre-nosotros {
-    background-color: #fff; /* Fondo blanco para destacar el contenido */
+    background-color: #000; /* Fondo negro */
     padding: 30px 0;
-    border-top: 5px solid #358b32; /* Línea verde en la parte superior */
+    border-top: 5px solid #d4af37; /* Línea dorada en la parte superior */
 }
 
 .sobre-nosotros-container {
@@ -75,8 +80,8 @@ nav ul li a {
 
 .sobre-nosotros h2 {
     text-align: center;
-    color: #358b32; /* Color verde para el título */
-    margin-bottom: 30px; /* Aumentar margen inferior del título */
+    color: #d4af37; /* Color dorado para el título */
+    margin-bottom: 30px;
 }
 
 .sobre-nosotros-content {
@@ -84,7 +89,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px; /* Espacio entre la imagen y el texto */
+    gap: 30px;
 }
 
 .sobre-nosotros-img {
@@ -96,20 +101,20 @@ nav ul li a {
 
 #sobre-nosotros p {
     font-size: 18px;
-    color: #333; 
-    line-height: 1.8; 
-    margin: 0 3rem; 
+    color: #fff; /* Texto blanco */
+    line-height: 1.8;
+    margin: 0 3rem;
 }
 
 section {
     margin: 30px 0;
 }
 section.active {
-    border: 2px solid #358b32; /* Borde verde para resaltar la sección activa */
+    border: 2px solid #d4af37; /* Borde dorado */
     padding: 20px;
-    background-color: #e8f5e9; /* Fondo ligeramente verde para la sección activa */
+    background-color: #2b2b2b; /* Fondo gris oscuro para la sección activa */
     border-radius: 5px;
-    transition: all 0.3s ease; /* Transición suave para el borde y fondo */
+    transition: all 0.3s ease;
 }
 
 section h2 {
@@ -117,11 +122,12 @@ section h2 {
     font-weight: 600;
     font-style: normal;
     text-align: center;
-    color: rgb(4, 46, 16);;
+    color: #d4af37; /* Color dorado */
+    text-shadow:0 0 5.8rem #FFD700;
 }
 .plantas h2 {
     text-align: center;
-    color: rgb(4, 46, 16);
+    color: #d4af37; /* Color dorado */
     margin: 6rem 0rem 2rem;
 }
 
@@ -133,10 +139,10 @@ section h2 {
 
 .product {
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #644c10;
     border-radius: 5px;
     text-align: center;
-    background-color: #fff;
+    background-color: #000; /* Fondo negro */
     box-sizing: border-box;
 }
 
@@ -148,18 +154,18 @@ section h2 {
 
 .product h3 {
     margin: 10px 0;
-    color: #333;
+    color: #d4af37; /* Color dorado */
 }
 
 .product p {
-    color: #666;
+    color: #fff; /* Texto blanco */
     line-height: 1.6;
     margin: 0 1rem;
 }
 
 footer {
-    background: #358b32; /* Color de fondo del footer */
-    color: #fff;
+    background: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
     padding: 20px 0;
     margin-top: 30px;
 }
@@ -173,21 +179,22 @@ footer {
 .footer-section {
     flex: 1;
     min-width: 200px;
-
 }
 
 .footer-section h3 {
     margin-top: 0;
+    color: #d4af37; /* Color dorado */
+    text-shadow:0 0 1.6rem #FFD700;
 }
 
 .footer-section p, .footer-section a {
-    color: #fff; /* Color de texto */
+    color: #fff; /* Texto blanco */
     text-decoration: none;
 }
 
 .footer-section a:hover {
     text-decoration: underline;
-    color: #d1e0d1; /* Color de texto al pasar el ratón */
+    color: #d4af37; /* Color dorado al pasar el ratón */
 }
 
 .social-media {
@@ -200,23 +207,24 @@ footer {
     display: inline;
     margin-right: 10px;
 }
+
 .social-icon {
-    color: #fff;
+    color: #fff; /* Texto blanco */
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px;
 }
 
 .social-icon:hover {
-    color: #358b32; /* Color del texto de los iconos al pasar el ratón */
+    color: #d4af37; /* Color dorado al pasar el ratón */
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
+    color: #d4af37; /* Texto dorado */
 }
-
 
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 1024px) {
@@ -241,20 +249,19 @@ footer {
         grid-template-columns: 1fr;
     }
     .footer-content {
-        flex-direction: column; /* Organiza los elementos en una columna en pantallas pequeñas */
-        align-items: center; /* Centra los elementos en el contenedor */
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-section {
-        margin-bottom: 20px; /* Añade margen inferior para separar las secciones */
+        margin-bottom: 20px;
     }
 
     .social-media {
-        margin-top: 20px; /* Añade margen superior para separar de la parte superior */
+        margin-top: 20px;
     }
 
     .footer-bottom {
-        margin-top: 30px; /* Añade más margen superior en la parte inferior del footer */
+        margin-top: 30px;
     }
-    
 }
