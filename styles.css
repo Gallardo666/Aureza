@@ -1,5 +1,11 @@
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gupter', serif;
+    font-weight: 500;
+    font-style: normal;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -19,6 +25,10 @@ header {
 }
 
 header h1 {
+    font-family: 'Explora', serif;
+    font-weight: 4rem;
+    font-style: normal;
+    font-size: 6rem;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -33,11 +43,14 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario */
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 0.8rem;
 }
 
 nav ul li a {
@@ -45,15 +58,71 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
+    display: block; /* Asegura que los enlaces sean bloques para facilitar el ajuste en pantallas pequeñas */
+    padding: 10px;
+}
+
+#sobre-nosotros {
+    background-color: #fff; /* Fondo blanco para destacar el contenido */
+    padding: 30px 0;
+    border-top: 5px solid #358b32; /* Línea verde en la parte superior */
+}
+
+.sobre-nosotros-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre-nosotros h2 {
+    text-align: center;
+    color: #358b32; /* Color verde para el título */
+    margin-bottom: 30px; /* Aumentar margen inferior del título */
+}
+
+.sobre-nosotros-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px; /* Espacio entre la imagen y el texto */
+}
+
+.sobre-nosotros-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar la imagen */
+}
+
+#sobre-nosotros p {
+    font-size: 18px;
+    color: #333; 
+    line-height: 1.8; 
+    margin: 0 3rem; 
 }
 
 section {
     margin: 30px 0;
 }
+section.active {
+    border: 2px solid #358b32; /* Borde verde para resaltar la sección activa */
+    padding: 20px;
+    background-color: #e8f5e9; /* Fondo ligeramente verde para la sección activa */
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transición suave para el borde y fondo */
+}
 
 section h2 {
+    font-family: 'Gupter', serif;
+    font-weight: 600;
+    font-style: normal;
     text-align: center;
-    color: #333;
+    color: rgb(4, 46, 16);;
+}
+.plantas h2 {
+    text-align: center;
+    color: rgb(4, 46, 16);
+    margin: 6rem 0rem 2rem;
 }
 
 .product-grid {
@@ -84,6 +153,8 @@ section h2 {
 
 .product p {
     color: #666;
+    line-height: 1.6;
+    margin: 0 1rem;
 }
 
 footer {
@@ -102,7 +173,7 @@ footer {
 .footer-section {
     flex: 1;
     min-width: 200px;
-    margin: 0 15px;
+
 }
 
 .footer-section h3 {
@@ -129,20 +200,14 @@ footer {
     display: inline;
     margin-right: 10px;
 }
-
 .social-icon {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.3rem;
     padding: 10px;
-    border: 1px solid #fff; /* Color del borde de los iconos */
-    border-radius: 50%;
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
 }
 
 .social-icon:hover {
-    background-color: #fff; /* Fondo de los iconos al pasar el ratón */
     color: #358b32; /* Color del texto de los iconos al pasar el ratón */
 }
 
@@ -161,7 +226,35 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .sobre-nosotros-content {
+        flex-direction: column;
+    }
+
+    .sobre-nosotros-img {
+        width: 80%;
+    }
+
+    .sobre-nosotros p {
+        margin: 0 10px;
+    }
     .product-grid {
         grid-template-columns: 1fr;
     }
+    .footer-content {
+        flex-direction: column; /* Organiza los elementos en una columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos en el contenedor */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Añade margen inferior para separar las secciones */
+    }
+
+    .social-media {
+        margin-top: 20px; /* Añade margen superior para separar de la parte superior */
+    }
+
+    .footer-bottom {
+        margin-top: 30px; /* Añade más margen superior en la parte inferior del footer */
+    }
+    
 }

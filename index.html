@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aureza - Tienda Online de Plantas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Explora&family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,8 +27,33 @@
         </div>
     </header>
     <div class="container">
+        <!-- Sección Sobre Nosotros -->
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>En Plantixa, somos apasionados por las plantas y nos dedicamos a ofrecer una amplia gama de plantas de alta calidad para todos los espacios. Desde cactus y suculentas hasta plantas de interior y bonsáis, nuestro objetivo es proporcionar a nuestros clientes las mejores opciones para embellecer sus hogares y oficinas. Creemos en la belleza y los beneficios de las plantas, y estamos aquí para ayudarte a encontrar la planta perfecta para tu espacio.</p>
+        </section>
+
+                <!-- Sección de Plantas de Interior -->
+        <section id="plantas-de-interior" class="plantas">
+            <h2>Plantas de Interior</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="interior1.jpg" alt="Espatifilo">
+                    <h3>Espatifilo</h3>
+                    <p>Conocida por sus elegantes flores blancas y su capacidad para purificar el aire.</p>
+                </div>
+
+                <div class="product">
+                    <img src="interior2.jpg" alt="Pothos">
+                    <h3>Pothos</h3>
+                    <p>Planta resistente y fácil de cuidar, ideal para interiores.</p>
+                </div>
+                
+            </div>
+        </section>
+        
         <!-- Sección de Cactus -->
-        <section id="cactus">
+        <section id="cactus" class="plantas">
             <h2>Cactus</h2>
             <div class="product-grid">
                 <div class="product">
@@ -41,7 +72,7 @@
         </section>
 
         <!-- Sección de Suculentas -->
-        <section id="suculentas">
+        <section id="suculentas"class="plantas">
             <h2>Suculentas</h2>
             <div class="product-grid">
                 <div class="product">
@@ -59,27 +90,8 @@
             </div>
         </section>
 
-        <!-- Sección de Plantas de Interior -->
-        <section id="plantas-de-interior">
-            <h2>Plantas de Interior</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="interior1.jpg" alt="Espatifilo">
-                    <h3>Espatifilo</h3>
-                    <p>Conocida por sus elegantes flores blancas y su capacidad para purificar el aire.</p>
-                </div>
-
-                <div class="product">
-                    <img src="interior2.jpg" alt="Pothos">
-                    <h3>Pothos</h3>
-                    <p>Planta resistente y fácil de cuidar, ideal para interiores.</p>
-                </div>
-                
-            </div>
-        </section>
-
         <!-- Sección de Bonsáis -->
-        <section id="bonsais">
+        <section id="bonsais" class="plantas">
             <h2>Bonsáis</h2>
             <div class="product-grid">
                 <div class="product">
@@ -104,16 +116,12 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contacto</h3>
-                    <p>Email: contacto@plantixa.com</p>
-                    <p>Teléfono: +34 123 456 789</p>
+                    <p>Email: aureza.01@gmail.com</p>
                 </div>
                 <div class="footer-section">
                     <h3>Síguenos</h3>
-                    <ul class="social-media">
-                        <li><a href="#" class="social-icon">FB</a></li>
-                        <li><a href="#" class="social-icon">TW</a></li>
-                        <li><a href="#" class="social-icon">IG</a></li>
-                    </ul>
+                    <a href="https://www.instagram.com/Plantixa" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    
                 </div>
                 <div class="footer-section">
                     <h3>Información</h3>
@@ -125,7 +133,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Plantixa. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Aureza. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
