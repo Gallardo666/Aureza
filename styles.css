@@ -89,6 +89,23 @@ nav ul li :hover {
     height: 40px;
 }
 
+#cart-icon-bubble {
+    position: absolute; /* Fijar el ícono en la página */
+    top: 6%; /* Espacio desde el borde superior */
+    right: 6%; /* Espacio desde el borde derecho */
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    text-decoration: none;
+    color: #fff; /* Color blanco por defecto */
+}
+
+.icon-cart {
+    width: 40px; /* Tamaño del ícono */
+    height: 40px;
+}
+
 .cart-count-bubble {
     position: absolute;
     top: -10px;
@@ -103,7 +120,6 @@ nav ul li :hover {
     justify-content: center;
     z-index: 2; /* Asegúrate de que el contador esté por encima del ícono */
 }
-
 .visually-hidden {
     position: absolute;
     width: 1px;
