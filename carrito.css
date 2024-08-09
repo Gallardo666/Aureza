@@ -1,0 +1,219 @@
+html {
+    scroll-behavior: smooth; 
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Gupter', serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #1a1a1a; /* Fondo gris muy oscuro para diferenciarse del negro puro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
+    border-bottom: #d4af37 3px solid; /* Borde dorado */
+}
+
+header h1 {
+    font-family: 'Explora', serif;
+    font-weight: 4rem;
+    font-style: normal;
+    font-size: 6rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #d4af37; /* Color dorado para el título */
+    text-shadow: 0 0 2.6rem #FFD700;
+}
+
+/* Eliminando los estilos predeterminados de los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* El color del enlace será el mismo que el del texto circundante */
+}
+
+a:visited {
+    color: inherit; /* Mantiene el color del enlace después de ser visitado */
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none; /* Elimina el subrayado al interactuar con el enlace */
+    color: inherit; /* Mantiene el color del enlace */
+}
+
+#cart-items {
+    
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #fff; /* Texto blanco */
+}
+
+.cart-item {
+    background-color: #1a1a1a; /* Fondo gris oscuro para cada item del carrito */
+    color: #fff; /* Texto blanco */
+
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.quantity {
+    font-weight: bold;
+    color: #d4af37; /* Color dorado para la cantidad */
+}
+
+button {
+    background-color: #d4af37; /* Color dorado para los botones */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 0.9rem;
+    margin: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b89c2e; /* Color dorado más oscuro al pasar el ratón */
+}
+
+button:disabled {
+    background-color: #777; /* Color gris para botones deshabilitados */
+    cursor: not-allowed;
+}
+
+/* Añadir espaciado entre el carrito y el footer */
+.container {
+    margin-bottom: 60px;
+}
+
+footer {
+    background: #000; 
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: #d4af37 3px solid;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    color: #d4af37; /* Color dorado */
+    text-shadow: 0 0 1.6rem #FFD700;
+}
+
+.footer-section p, .footer-section a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0.6rem 0;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #d4af37; /* Color dorado al pasar el ratón */
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-icon {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.social-icon:hover {
+    color: #d4af37; /* Color dorado al pasar el ratón */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #d4af37; /* Texto dorado */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+    }
+}

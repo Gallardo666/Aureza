@@ -1,21 +1,39 @@
-// Función para manejar el desplazamiento suave cuando se hace clic en un enlace de navegación
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona todos los enlaces de navegación que tienen un href que comienza con "#"
-    const links = document.querySelectorAll('nav a[href^="#"]');
+// cart.js
 
-    links.forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+document.addEventListener('DOMContentLoaded', () => {
+    const cartItemsContainer = document.getElementById('cart-items');
 
-            const targetId = this.getAttribute("href"); // Obtiene el atributo href del enlace
-            const targetElement = document.querySelector(targetId); // Selecciona el elemento de destino
+    // Cargar productos desde el almacenamiento local
+    function loadCart() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItemsContainer.innerHTML = ''; // Limpiar el contenedor
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop, // Desplaza hacia la posición del elemento de destino
-                    behavior: "smooth" // Habilita el desplazamiento suave
-                });
-            }
+        cartItems.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'cart-item';
+            itemElement.innerHTML = `
+                <p>${item.name}</p>
+                <p>Precio: $${item.price}</p>
+                <button class="remove-btn" data-id="${item.id}">Eliminar</button>
+            `;
+            cartItemsContainer.appendChild(itemElement);
         });
-    });
+
+        // Añadir evento para eliminar productos
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', removeItem);
+        });
+    }
+
+    // Función para eliminar un producto
+    function removeItem(event) {
+        const id = event.target.getAttribute('data-id');
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems = cartItems.filter(item => item.id !== id);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        loadCart();
+    }
+
+    // Inicializar el carrito
+    loadCart();
 });
