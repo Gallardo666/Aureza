@@ -201,12 +201,15 @@ section h2 {
 
 .product-info p {
     margin: 0.5rem 0;
+    font-size: 1.1rem;
 }
 .product-info .precio {
     color:#d4af37 ;
+    font-size: 1.2rem;
 }
 .product-info p strong {
     color: #d4af37; 
+    font-size: 1.4rem;
 }
 
 .add-to-cart {
@@ -473,7 +476,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .recommended-item {
         width: 100%; /* Un elemento por fila */
         margin: 0 auto; /* Centro el elemento si hay márgenes laterales */
@@ -504,9 +507,6 @@ footer {
     .footer-bottom {
         margin-top: 30px;
     }
-}
-@media (max-width: 768px) {
-    
 }
 
 

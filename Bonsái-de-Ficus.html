@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aureza - Bonsái Ficus</title>
+    <link rel="icon" href="Img/LogoDoradoAureza.png">
+    <link rel="stylesheet" href="precompra-plantas.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Explora&family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><h1>
+                <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
+                Aureza
+            </h1></a>
+        </div>
+    </header>
+    <a href="/carrito.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+            <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
+        </svg>
+        <span class="visually-hidden">Carrito</span>
+        <div class="cart-count-bubble">
+            <span aria-hidden="true">0</span>
+            <span class="visually-hidden">0 artículos</span>
+        </div>
+    </a>
+    
+    <div class="container">
+        <!-- Producto -->
+        <section class="product-detail active">
+            <div class="product-content">
+                <img src="Img Plantas/Bonsai Ficus.jpg" alt="Bonsai Ficus">
+                <div class="product-info">
+                    <h2>Bonsai de Ficus</h2>
+                    <p class="precio">€45,99 EUR</p>
+                    <p><strong>Descripción:</strong> <br> El Bonsai Ficus es una planta ornamental popular por su follaje denso y sus raíces aéreas únicas. Con hojas verdes brillantes y un tronco robusto, aporta elegancia y naturalidad a cualquier espacio interior.</p>
+                    <p><strong>Guía de Cuidado:</strong> <br> Requiere luz indirecta brillante y suelo bien drenado. Mantén el suelo ligeramente húmedo, evitando el encharcamiento. Riega solo cuando la capa superior del suelo esté seca al tacto.</p>
+                    <button class="add-to-cart" data-id="401" data-name="Bonsai Ficus" data-price="45.99">Añadir al carrito</button>
+                </div>                
+            </div>
+            
+        </section>
+
+        <!-- Productos recomendados -->
+        <section id="recommended-products">
+            <h2>Te puede gustar</h2>
+            <div class="recommended-items">
+                <div class="recommended-item">
+                    <img src="Img Plantas/Bonsai-de-Pino.png" alt="Bonsai de Pino">
+                    <p class="product-name">Bonsai de Pino</p>
+                    <a href="Bonsái-de-Pino.html">
+                        <p class="product-price">€55,99</p>
+                    </a>
+                </div>
+                <div class="recommended-item">
+                    <img src="Img Plantas/Bonsái de Arce Japonés.jpg" alt="Bonsái de Arce Japonés">
+                    <p class="product-name">Bonsái de Arce Japonés</p>
+                    <a href="Bonsái-de-Arce-Japonés.html">
+                        <p class="product-price">€75,99</p>
+                    </a>
+                </div>
+                <div class="recommended-item">
+                    <img src="Img Plantas/Bonsái de Olmo Chino.png" alt="Bonsái de Olmo Chino">
+                    <p class="product-name">Bonsái de Olmo Chino</p>
+                    <a href="Bonsái-de-Olmo-Chino.html">
+                        <p class="product-price">€65,99</p>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    <!-- Botón flotante con flecha hacia atrás -->
+    <a href="index.html" class="floating-button" title="Volver al inicio">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Contacto</h3>
+                        <p>Email: aureza.01@gmail.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Síguenos</h3>
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Información</h3>
+                        <a href="#sobre-nosotros">Sobre Nosotros</a>
+                        <a href="#" id="privacy-link">Política de Privacidad</a>
+                        <a href="#" id="terms-link">Términos y Condiciones</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Aureza. Todos los derechos reservados.</p>
+                </div>
+            </div>
+            
+        <!-- Modales -->
+        <div id="privacy-modal" class="modal">
+            <div class="modal-content">
+            <span class="close" id="privacy-close">&times;</span>
+                <div class="modal-header">
+                    <h2>Política de Privacidad</h2> 
+                    <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
+                </div>
+                <p><strong>Fecha de entrada en vigor:</strong> 1 de diciembre de 2024</p>
+                
+                <!-- Contenido de la política de privacidad -->
+                <p>En Aureza, nos comprometemos a proteger tu privacidad y a garantizar la seguridad de tu información personal. Esta Política de Privacidad describe cómo recopilamos, utilizamos y compartimos tu información cuando visitas o realizas una compra en nuestro sitio web.</p>
+                <h3>1. Información que Recopilamos</h3>
+                <p><strong>Información Personal:</strong> Recopilamos información personal que nos proporcionas directamente, como tu nombre, dirección, correo electrónico y número de teléfono cuando creas una cuenta, realizas un pedido o te suscribes a nuestro boletín.</p>
+                <p><strong>Información de Uso:</strong> Recopilamos información sobre cómo interactúas con nuestro Sitio, como las páginas que visitas, los enlaces en los que haces clic y la cantidad de tiempo que pasas en nuestras páginas.</p>
+                <p><strong>Cookies y Tecnologías Similares:</strong> Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro Sitio, recordar tus preferencias y rastrear tus actividades para análisis internos.</p>
+                <h3>2. Cómo Utilizamos Tu Información</h3>
+                <p><strong>Para Procesar Transacciones:</strong> Utilizamos tu información para procesar tus pedidos y gestionar tus pagos. También utilizamos esta información para enviarte confirmaciones de pedidos y notificaciones sobre el estado de tus compras.</p>
+                <p><strong>Para Comunicación:</strong> Podemos enviarte actualizaciones sobre tu pedido, responder a tus consultas y proporcionarte información sobre productos, servicios y promociones que podrían interesarte, siempre que hayas dado tu consentimiento para recibir tales comunicaciones.</p>
+                <p><strong>Para Mejorar Nuestros Servicios:</strong> Utilizamos la información recopilada para analizar y mejorar el rendimiento de nuestro Sitio, así como para personalizar tu experiencia de usuario.</p>
+                <h3>3. Cómo Compartimos Tu Información</h3>
+                <p><strong>Con Proveedores de Servicios:</strong> Podemos compartir tu información con terceros proveedores de servicios que nos ayudan con el procesamiento de pagos, la entrega de productos y la gestión de marketing. Estos proveedores tienen acceso limitado a tu información únicamente para llevar a cabo estas tareas en nuestro nombre.</p>
+                <p><strong>Con Entidades Legales:</strong> Podemos compartir tu información cuando sea requerido por ley, para cumplir con procedimientos legales o en respuesta a una solicitud gubernamental.</p>
+                <h3>4. Seguridad de la Información</h3>
+                <p>Implementamos medidas razonables para proteger tu información personal contra el acceso no autorizado, la alteración, divulgación o destrucción de los datos que recopilamos y almacenamos. Sin embargo, ningún método de transmisión por internet o de almacenamiento electrónico es completamente seguro, por lo que no podemos garantizar su seguridad absoluta.</p>
+                <h3>5. Tus Derechos</h3>
+                <p>Tienes el derecho de acceder, corregir o eliminar tu información personal en cualquier momento. Si deseas ejercer estos derechos, por favor, contáctanos utilizando la información de contacto proporcionada en esta política.</p>
+                <h3>6. Cambios a esta Política</h3>
+                <p>Podemos actualizar esta Política de Privacidad en el futuro para reflejar cambios en nuestras prácticas de información. Te notificaremos sobre cualquier cambio importante publicando la nueva política en nuestro Sitio y, cuando sea necesario, solicitando tu consentimiento para esos cambios.</p>
+                <h3>7. Contacto</h3>
+                <p>Si tienes preguntas sobre nuestra Política de Privacidad o si deseas ejercer tus derechos de privacidad, por favor contáctanos en <a href="mailto:aureza.01@gmail.com">aureza.01@gmail.com</a>.</p>
+                
+                <a href="Archivos/Política_de_Privacidad.pdf" download>Descargar Política de Privacidad en PDF</a>
+            </div>
+        </div>
+
+            
+            
+        <!-- Modales -->
+        <div id="terms-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="terms-close">&times;</span>
+                <div class="modal-header">
+                    <h2>Términos y Condiciones</h2>
+                    <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
+                </div>
+                <p><strong>Fecha de entrada en vigor:</strong> 1 de diciembre de 2024</p>
+
+                <p>Bienvenido a Aureza. Al acceder o utilizar nuestro Sitio, aceptas cumplir con los siguientes Términos y Condiciones. Si no estás de acuerdo con estos términos, por favor, abstente de utilizar nuestro Sitio.</p>
+
+                <h3>1. Uso del Sitio</h3>
+                <p><strong>Licencia:</strong> Te otorgamos una licencia limitada, no exclusiva y revocable para acceder y utilizar nuestro Sitio únicamente para fines personales y no comerciales.</p>
+
+                <h3>2. Propiedad Intelectual</h3>
+                <p>Todo el contenido disponible en el Sitio, incluidos, entre otros, textos, gráficos, logotipos, imágenes y software, es propiedad de Aureza o de sus licenciantes y está protegido por las leyes de propiedad intelectual vigentes. No se permite la reproducción, distribución, modificación o cualquier uso no autorizado del contenido sin el consentimiento previo por escrito de Aureza.</p>
+
+                <h3>3. Uso Aceptable</h3>
+                <p><strong>Prohibiciones:</strong> No debes utilizar nuestro Sitio para actividades ilegales, difamatorias, abusivas, fraudulentas o que interfieran con el funcionamiento del Sitio. Esto incluye, pero no se limita a, la transmisión de virus, spam, o cualquier otro código malicioso.</p>
+                <p><strong>Contenido de Usuario:</strong> Si decides publicar o compartir contenido en nuestro Sitio, eres responsable de garantizar que dicho contenido no infrinja derechos de terceros ni viole ninguna ley. Al publicar contenido, nos otorgas una licencia mundial, libre de regalías y no exclusiva para usar, reproducir y distribuir dicho contenido en relación con el funcionamiento del Sitio.</p>
+
+                <h3>4. Enlaces a Terceros</h3>
+                <p>Nuestro Sitio puede contener enlaces a sitios web de terceros. Estos enlaces se proporcionan únicamente para tu conveniencia. No tenemos control sobre el contenido de estos sitios y no asumimos responsabilidad alguna por ellos. El acceso a sitios de terceros es bajo tu propio riesgo.</p>
+
+                <h3>5. Exención de Responsabilidad</h3>
+                <p>El Sitio y su contenido se proporcionan "tal cual" y "según disponibilidad". Aureza no ofrece garantías de ningún tipo, ya sean expresas o implícitas, sobre la precisión, confiabilidad o integridad del contenido del Sitio. No garantizamos que el Sitio esté libre de errores o que funcione sin interrupciones.</p>
+
+                <h3>6. Limitación de Responsabilidad</h3>
+                <p>En la máxima medida permitida por la ley, Aureza no será responsable de ningún daño directo, indirecto, incidental, especial o consecuente que surja del uso o la imposibilidad de uso del Sitio, incluso si hemos sido informados de la posibilidad de tales daños.</p>
+
+                <h3>7. Indemnización</h3>
+                <p>Aceptas indemnizar y mantener indemne a Aureza, sus directores, empleados y agentes de cualquier reclamo, daño, pérdida o gasto (incluidos los honorarios legales razonables) que surja del uso que hagas del Sitio o de tu violación de estos Términos y Condiciones.</p>
+
+                <h3>8. Modificaciones</h3>
+                <p>Nos reservamos el derecho a modificar estos Términos y Condiciones en cualquier momento. Cualquier cambio entrará en vigor inmediatamente después de su publicación en el Sitio. Es tu responsabilidad revisar periódicamente estos términos para estar al tanto de cualquier modificación.</p>
+
+                <h3>9. Ley Aplicable</h3>
+                <p>Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de España, sin considerar sus principios de conflicto de leyes. Cualquier disputa que surja en relación con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de España.</p>
+
+                <h3>10. Contacto</h3>
+                <p>Para cualquier pregunta, comentario o inquietud sobre estos Términos y Condiciones, por favor contáctanos en <a href="mailto:aureza.01@gmail.com">aureza.01@gmail.com</a>.</p>
+
+                <a href="Archivos/Terminos_y_Condiciones.pdf" download>Descargar Términos y Condiciones en PDF</a>
+            </div>
+        </div>
+        </footer>
+        
+        <script src="scripts.js"></script>
+</body>
+</html>

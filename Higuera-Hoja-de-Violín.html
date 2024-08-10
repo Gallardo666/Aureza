@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aureza - Tienda Online de Plantas</title>
+    <title>Aureza - Hoja de Violín</title>
     <link rel="icon" href="Img/LogoDoradoAureza.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="precompra-plantas.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
@@ -15,23 +16,13 @@
 <body>
     <header>
         <div class="container">
-            <h1>
+            <a href="index.html"><h1>
                 <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
                 Aureza
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="#plantas-de-exterior">Plantas de Exterior</a></li>
-                    <li><a href="#plantas-de-interior">Plantas de Interior</a></li>
-                    <li><a href="#cactus">Cactus</a></li>
-                    <li><a href="#suculentas">Suculentas</a></li>
-                    <li><a href="#bonsais">Bonsáis</a></li>
-                </ul>
-            </nav>
+            </h1></a>
         </div>
     </header>
-    
-    <a href="/cart" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+    <a href="/carrito.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
             <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
         </svg>
@@ -43,244 +34,54 @@
     </a>
 
     <div class="container">
-        <!-- Sección Sobre Nosotros -->
-        <section id="sobre-nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>En Aureza, somos apasionados por las plantas y nos dedicamos a ofrecer una amplia gama de plantas de alta calidad para todos los espacios. Desde cactus 
-                y suculentas hasta plantas de interior y bonsáis, nuestro objetivo es proporcionar a nuestros clientes las mejores opciones para embellecer sus hogares 
-                y oficinas. Creemos en la belleza y los beneficios de las plantas, y estamos aquí para ayudarte a encontrar la planta perfecta para tu espacio.</p>
-        </section>
-
-        <!-- Sección de Plantas de Exterior -->
-        <section id="plantas-de-exterior" class="plantas">
-            <h2>Plantas de Exterior</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="Img Plantas/Golden Crest.jpg" alt="Golden Crest">
-                    <h3>Golden Crest</h3>
-                    <p>
-                        <a href="golden-crest.html">
-                        €6,99 EUR
-                        </a>
-                    </p>
-                </div>
-                <div class="product">
-                    <img src="Img Plantas/THUYA_BOLA.jpg" alt="THUYA_BOLA">
-                    <h3>Thuya Bola</h3>
-                    <p>
-                        <a href="Thuya-Bola.html">
-                        €5,99 EUR
-                        </a>
-                    </p>
-                </div>
-                <div class="product">
-                    <img src="Img Plantas/Juniperus-Pfitzeriana-Aurea.jpg" alt="Juniperus Pfitzeriana Aurea">
-                    <h3>Juniperus Pfitzeriana Aurea</h3>
-                    <p>
-                        <a href="Juniperus-Pfitzeriana-Aurea.html">
-                        €4,99 EUR
-                        </a>
-                    </p>
-                </div>
-                <div class="product">
-                    <img src="Img Plantas/Nana Gracilis.jpg" alt="Nana Gracilis">
-                    <h3>Nana Gracilis</h3>
-                    <p>
-                        <a href="Nana-Gracilis.html">
-                        €8,99 EUR
-                        </a>
-                    </p>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Sección de Plantas de Interior -->
-        <section id="plantas-de-interior" class="plantas">
-            <h2>Plantas de Interior</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="Img Plantas/Espatifilo.png" alt="Espatifilo">
-                    <h3>Espatifilo</h3>
-                    <p>
-                        <a href="Espatifilo.html">
-                            Precio: €21,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-                <div class="product">
-                    <img src="Img Plantas/Pothos.jpg" alt="Pothos">
-                    <h3>Pothos</h3>
-                    <p>
-                        <a href="Pothos.html">
-                            Precio: €16,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-                <div class="product">
-                    <img src="Img Plantas/Costilla de Adán.jpg" alt="Costilla de Adán">
-                    <h3>Costilla de Adán</h3>
-                    <p>
-                        <a href="Costilla-de-Adán.html">
-                            Precio: €16,99 EUR 
-                        </a>
-                    </p>
-                </div>
-        
-                <div class="product">
-                    <img src="Img Plantas/Hoja-de-Violin.png" alt="Hoja de Violín">
-                    <h3>Higuera Hoja de Violín</h3>
-                    <p>
-                        <a href="Higuera-Hoja-de-Violín.html">
-                            Precio: €21,.99 EUR
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Cactus -->
-        <section id="cactus" class="plantas">
-            <h2>Cactus</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="Img Plantas/Cactus-Cabeza-Viejo.png" alt="Cactus-Cabeza-Viejo">
-                    <h3>Cactus Cabeza de Viejo</h3>
-                    <p>
-                        <a href="Cactus-Cabeza-Viejo.html">
-                            Precio: €31,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-                <div class="product">
-                    <img src="Img Plantas/Barril Dorado.jpg" alt="Cactus Barril Dorado">
-                    <h3>Cactus Barril Dorado</h3>
-                    <p>
-                        <a href="Cactus-Barril-Dorado.html">
-                            Precio: €21,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-                <div class="product">
-                    <img src="Img Plantas/Nopal.jpg" alt="Nopal">
-                    <h3>Nopal</h3>
-                    <p>
-                        <a href="Nopal.html">
-                            Precio: €16,99 EUR
-                        </a>
-                    </p>
-                </div>
-                <div class="product">
-                    <img src="Img Plantas/Cactus-Astro.png" alt="Cactus-Astro">
-                    <h3>Cactus Astro</h3>
-                    <p>
-                        <a href="Cactus-Astro.html">
-                            Precio: €26,99 EUR
-                        </a>
-                    </p>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Sección de Suculentas -->
-        <section id="suculentas"class="plantas">
-            <h2>Suculentas</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="Img Plantas/Planta Cebra.jpg" alt="Planta Cebra">
-                    <h3>Planta Cebra</h3>
-                    <p>
-                        <a href="Planta-Cebra.html">
-                            Precio: €11,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-                <div class="product">
-                    <img src="Img Plantas/Echeveria.png" alt="Echeveria">
-                    <h3>Echeveria</h3>
-                    <p>
-                        <a href="Echeveria.html" >
-                            Precio: €11,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-                <div class="product">
-                    <img src="Img Plantas/Jade.jpg" alt="Jade">
-                    <h3>Jade</h3>
-                    <p>
-                        <a href="Jade.html">
-                            Precio: €11,99 EUR
-                        </a>
-                    </p>
-                </div>
-                
-                <div class="product">
-                    <img src="Img Plantas/Sedum Morganianum.jpg" alt="Sedum Morganianum">
-                    <h3>Sedum Morganianum</h3>
-                    <p>
-                        <a href="Sedum-Morganianum.html">
-                            Precio: €9,99 EUR
-                        </a>
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Sección de Bonsáis -->
-        <section id="bonsais" class="plantas">
-            <h2>Bonsáis</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="Img Plantas/Bonsai Ficus.jpg" alt="Bonsái de Ficus">
-                    <h3>Bonsái de Ficus</h3>
-                    <p>
-                        <a href="Bonsái-de-Ficus.html">
-                            Precio: €45,99 EUR
-                        </a>
-                    </p>
-                </div>
-                
-                <div class="product">
-                    <img src="Img Plantas/Bonsai-de-Pino.png" alt="Bonsái de Pino">
-                    <h3>Bonsái de Pino</h3>
-                    <p>
-                        <a href="Bonsái-de-Pino.html">
-                            Precio: €55,99 EUR
-                        </a>
-                    </p>
-                </div>
-                
-                <div class="product">
-                    <img src="Img Plantas/Bonsái de Arce Japonés.jpg" alt="Bonsái de Arce Japonés">
-                    <h3>Bonsái de Arce Japonés</h3>
-                    <p>
-                        <a href="Bonsái-de-Arce-Japonés.html">
-                            Precio: €75,99 EUR
-                        </a>
-                    </p>
-                </div>
-                
-                <div class="product">
-                    <img src="Img Plantas/Bonsái de Olmo Chino.png" alt="Bonsái de Olmo Chino">
-                    <h3>Bonsái de Olmo Chino</h3>
-                    <p>
-                        <a href="Bonsái-de-Olmo-Chino.html">
-                            Precio: €65,99 EUR
-                        </a>
-                    </p>
+        <!-- Producto -->
+        <section class="product-detail active">
+            <div class="product-content">
+                <img src="Img Plantas/Hoja-de-Violin.png" alt="Higuera Hoja de Violín">
+                <div class="product-info">
+                    <h2>Higuera Hoja de Violín</h2>
+                    <p class="precio">€21,99 EUR</p>
+                    <p><strong>Descripción:</strong> <br> La Higuera Hoja de Violín, también conocida como Fiddle Leaf Fig, es una planta de interior muy popular por sus grandes hojas brillantes en forma de violín. Ideal para espacios que necesitan un toque de verde exuberante, esta planta aporta un aire de sofisticación y frescura a cualquier habitación.</p>
+                    <p><strong>Guía de Cuidado:</strong> <br> Prefiere luz indirecta brillante y un suelo bien drenado. Mantén el suelo ligeramente húmedo, evitando el encharcamiento. Es importante regar solo cuando la capa superior del suelo esté seca al tacto. Evita cambios bruscos de temperatura y corrientes de aire.</p>
+                    <button class="add-to-cart" data-id="104" data-name="Higuera Hoja de Violín" data-price="21.99">Añadir al carrito</button>
                 </div>                
+            </div>
             
+        </section>
+
+        <!-- Productos recomendados -->
+        <section id="recommended-products">
+            <h2>Te puede gustar</h2>
+            <div class="recommended-items">
+                <div class="recommended-item">
+                    <img src="Img Plantas/Espatifilo.png" alt="Espatifilo">
+                    <p class="product-name">Espatifilo</p>
+                    <a href="Espatifilo.html">
+                        <p class="product-price">€21,99</p>
+                    </a>
+                </div>
+                <div class="recommended-item">
+                    <img src="Img Plantas/Pothos.jpg" alt="Pothos">
+                    <p class="product-name">Pothos</p>
+                    <a href="Pothos.html">
+                        <p class="product-price">€16,99</p>
+                    </a>
+                </div>
+                <div class="recommended-item">
+                    <img src="Img Plantas/Costilla de Adán.jpg" alt="Pothos">
+                    <p class="product-name">Costilla de Adán</p>
+                    <a href="Pothos.html">
+                        <p class="product-price">€16,99</p>
+                    </a>
+                </div>
+                
             </div>
         </section>
     </div>
+    <!-- Botón flotante con flecha hacia atrás -->
+    <a href="index.html" class="floating-button" title="Volver al inicio">
+        <i class="fas fa-arrow-left"></i>
+    </a>
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -291,7 +92,7 @@
                     </div>
                     <div class="footer-section">
                         <h3>Síguenos</h3>
-                        <a href="https://www.instagram.com/Plantixa" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="footer-section">
                         <h3>Información</h3>
@@ -305,7 +106,7 @@
                 </div>
             </div>
             
-        <!-- Modales -->
+                   <!-- Modales -->
         <div id="privacy-modal" class="modal">
             <div class="modal-content">
             <span class="close" id="privacy-close">&times;</span>
@@ -389,7 +190,6 @@
                 <a href="Archivos/Terminos_y_Condiciones.pdf" download>Descargar Términos y Condiciones en PDF</a>
             </div>
         </div>
-
         </footer>
         
         <script src="scripts.js"></script>
