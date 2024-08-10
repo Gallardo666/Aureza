@@ -17,86 +17,48 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    width: 100%;
+    max-width: 80%; /* Puedes ajustar este valor según necesites */
+    margin: 0 auto;
+    padding: 0 15px;
 }
-
 header {
     background: #000; /* Fondo negro */
     color: #fff; /* Texto blanco */
     padding: 20px 0;
     border-bottom: #d4af37 3px solid; /* Borde dorado */
 }
-
-.logo {
-    width: 6rem; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantén la proporción del logo */
-    vertical-align: middle; /* Alinea verticalmente con el texto */
-    margin-right: 2rem; /* Espacio entre el logo y el texto */
-    margin-bottom: 1rem;
-}
-
-header h1 {
-    font-family: 'Explora', serif;
-    font-weight: 4rem;
-    font-style: normal;
-    font-size: 6rem;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #d4af37; /* Color dorado para el título */
-    text-shadow:0 0 2.6rem #FFD700;
-}
-
-nav {
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.superior-header{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 0.8rem;
-}
-
-nav ul li a {
-    color: #fff; /* Texto blanco */
-    text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    display: block;
-    padding: 10px;
-}
-nav ul li :hover {
-    color: #d4af37; /* Color dorado para el título */
-}
-
-#cart-icon-bubble {
-    position: fixed; /* Fijar el ícono en la página */
-    top: 8%; /* Espacio desde el borde superior */
-    right: 6%; /* Espacio desde el borde derecho */
-    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    margin-right: 20px;
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    text-decoration: none;
-    color: #fff; /* Color blanco por defecto */
 }
 
-.icon-cart {
-    width: 40px; /* Tamaño del ícono */
-    height: 40px;
+
+.logo-title {
+    display: flex;
+    align-items: center;
 }
 
+/* Estilo del logo */
+.logo {
+    width: 6rem; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantén la proporción del logo */
+    margin-right: 1rem; /* Espacio entre el logo y el texto */
+}
+
+
+/* Estilo del texto Aureza */
+.aureza-text {
+    font-family: 'Explora', serif;
+    font-size: 6rem;
+    color: #d4af37;
+    text-shadow: 0 0 2.6rem #FFD700;
+    margin-left: 2rem;
+    margin-top: -0.1rem;
+    margin-bottom: 0.9rem;
+    padding: 0;
+}
 #cart-icon-bubble {
     position: absolute; /* Fijar el ícono en la página */
     top: 6%; /* Espacio desde el borde superior */
@@ -139,6 +101,41 @@ nav ul li :hover {
     border: 0;
 }
 
+
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 0.8rem;
+}
+
+nav ul li a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px;
+}
+nav ul li a:hover {
+    color: #d4af37; /* Color dorado para el título */
+}
+
+
+
 #sobre-nosotros {
     background-color: #000; /* Fondo negro */
     padding: 30px 0;
@@ -177,6 +174,11 @@ nav ul li :hover {
     line-height: 1.8;
     margin: 0 3rem;
 }
+#sobre-nosotros p span {
+    color: #d4af37;
+    text-shadow:0 0 0.8rem #FFD700 ;
+}
+
 
 section {
     margin: 30px 0;
@@ -499,5 +501,16 @@ footer {
 
     .footer-bottom {
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 530px) {
+    .aureza-text {
+        display: none; /* Oculta el texto "Aureza" en pantallas pequeñas */
+    }
+
+    .logo-title {
+        justify-content: center; /* Centra el logo cuando desaparece el texto */
+        margin-left: 1rem;
     }
 }
