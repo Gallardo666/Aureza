@@ -37,6 +37,13 @@ header .container {
     justify-content: center; /* Centra el contenido dentro del contenedor */
     align-items: center;
 }
+.logo {
+    width: 6rem; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantén la proporción del logo */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 2rem; /* Espacio entre el logo y el texto */
+    margin-bottom: 1rem;
+}
 header h1 {
     font-family: 'Explora', serif;
     font-weight: 4rem;
@@ -273,8 +280,13 @@ section h2 {
 
 .product-price {
     font-size: 16px;
-    color: #d4af37;
+    color: #fff;
     
+}
+.product-price:hover {
+    font-size: 16px;
+    color: #d4af37;
+    text-decoration: dashed solid;
 }
 
 /* Estilo para el botón flotante */
@@ -307,7 +319,7 @@ section h2 {
 
 
 
-/* Estilo del modal */
+/* Estilos del modal */
 .modal {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -317,20 +329,40 @@ section h2 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(29, 28, 26, 1); /* Fondo dorado semitransparente */
+    background-color: rgba(29, 28, 26, 0.8); /* Fondo semitransparente */
 }
 
-/* Estilo del contenido del modal */
+/* Estilos del contenido del modal */
 .modal-content {
     margin: 1.6% auto; 
     padding: 20px;
-    width: 60%;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    max-width: 900px; /* Ancho máximo */
     color: #fff; 
     border-radius: 10px; 
-    background-color: rgba(29, 28, 26, 0); 
+    background-color: rgba(29, 28, 26, 1); /* Fondo sólido */
+    position: relative; /* Necesario para posicionar el logo */
 }
 
-/* Estilo del botón de cierre */
+/* Encabezado del modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre título y logo */
+    align-items: center;
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #d4af37; /* Color dorado para el título */
+}
+
+.logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+/* Estilos del botón de cierre */
 .close {
     color: #aaa;
     float: right;
@@ -345,27 +377,19 @@ section h2 {
     cursor: pointer;
 }
 
-/* Estilo para la numeración dorada */
+/* Ajustes para el contenido del modal */
 .modal-content h3 {
-    color: #DAA520; 
-    font-weight: bold; 
-    font-size: 1.3em; 
+    color: #d4af37;
 }
 
-/* Encabezados más grandes */
-.modal-content h2 {
-    font-size: 2em; 
-    color: #DAA520;
-    margin-bottom: 20px; 
-}
 .modal-content a {
-    color: #d4ade6; 
-    text-decoration: none; 
+    color: #aa6cd3; 
+    text-decoration: none;
 }
 
 .modal-content a:hover {
-    color: #d4ade6; 
-    text-decoration: underline; 
+    text-decoration: underline;
+
 }
 
 footer {
