@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//Desplegable
+//Desplegable Politica de Privacidad | Terminos y Condiciones
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('privacy-link').onclick = function(event) {
         event.preventDefault();
