@@ -16,64 +16,61 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.html"><h1>
-                <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
-                Aureza
-            </h1></a>
+            <div class="superior-header">
+                <div class="logo-title">
+                    <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
+                    <h1 class="aureza-text">Aureza</h1>
+                </div>
+                <a href="cart.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+                        <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                            <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
+                        </svg>
+                        <span class="visually-hidden">Carrito</span>
+                        <div class="cart-count-bubble">
+                            <span aria-hidden="true">0</span>
+                            <span class="visually-hidden">0 artículos</span>
+                        </div>
+                </a>
+            </div>
         </div>
     </header>
-    <a href="/carrito.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-            <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
-        </svg>
-        <span class="visually-hidden">Carrito</span>
-        <div class="cart-count-bubble">
-            <span aria-hidden="true">0</span>
-            <span class="visually-hidden">0 artículos</span>
-        </div>
-    </a>
 
     <div class="container">
         <!-- Producto -->
         <section class="product-detail active">
             <div class="product-content">
-                <img src="Img Plantas/Cactus-Astro.png" alt="Cactus Astro">
+                <img src="Img Plantas/Nopal.jpg" alt="Nopal">
                 <div class="product-info">
-                    <h2>Cactus Astro</h2>
-                    <p class="precio">€26,99 EUR</p>
-                    <p><strong>Descripción:</strong> <br> El Cactus Astro es una planta suculenta que se destaca por su forma única y sus colores vibrantes. Este cactus tiene una apariencia esférica con espinas finas que forman patrones atractivos. Ideal para añadir un toque exótico y de bajo mantenimiento a cualquier rincón de tu hogar.</p>
-                    <p><strong>Guía de Cuidado:</strong> <br> Requiere luz directa y abundante, preferiblemente a pleno sol. El suelo debe ser bien drenado; utiliza una mezcla para cactus o suculentas. Riega con moderación, permitiendo que el suelo se seque completamente entre riegos. Evita el exceso de agua para prevenir el riesgo de pudrición de las raíces.</p>
-                    <button class="add-to-cart" data-id="204" data-name="Cactus Astro" data-price="26.99">Añadir al carrito</button>
+                    <h2>Nopal</h2>
+                    <p class="precio">€16,99 EUR</p>
+                    <p><strong>Descripción:</strong> <br> El Nopal, también conocido como cactus de nopalera, es una planta suculenta que destaca por sus hojas planas y ovaladas. Es muy apreciado tanto por sus usos culinarios como decorativos. Sus hojas verdes tienen una textura característica y pueden producir flores de colores brillantes. Ideal para añadir un toque exótico y vibrante a cualquier espacio.</p>
+                    <p><strong>Guía de Cuidado:</strong> <br> Coloca el Nopal en un lugar con luz solar directa para mantener su salud óptima. Utiliza una mezcla para cactus o suculentas que permita un buen drenaje del agua. Riega con moderación, dejando que el suelo se seque completamente entre riegos. Evita el exceso de agua para prevenir el riesgo de pudrición de las raíces.</p>
+                    <button class="add-to-cart" data-id="203" data-name="Nopal" data-price="16.99">Añadir al carrito</button>
                 </div>                
-            </div>            
+            </div>                       
         </section>
 
         <!-- Productos recomendados -->
         <section id="recommended-products">
             <h2>Te puede gustar</h2>
             <div class="recommended-items">
-                <div class="recommended-item">
-                    <img src="Img Plantas/Cactus-Cabeza-Viejo.png" alt="Cactus Cabeza de Viejo">
-                    <p class="product-name">Cactus Cabeza de Viejo</p>
-                    <a href="Cactus-Cabeza-Viejo.html">
+                <div class="recommended-items">
+                    <a href="Cactus-Cabeza-Viejo.html" class="recommended-item">
+                        <img src="Img Plantas/Cactus-Cabeza-Viejo.png" alt="Cactus Cabeza de Viejo">
+                        <p class="product-name">Cactus Cabeza de Viejo</p>
                         <p class="product-price">€31,99</p>
                     </a>
-                </div>
-                <div class="recommended-item">
-                    <img src="Img Plantas/Barril Dorado.jpg" alt="Barril Dorado">
-                    <p class="product-name">Barril Dorado</p>
-                    <a href="Cactus-Barril-Dorado.html">
+                    <a href="Cactus-Barril-Dorado.html" class="recommended-item">
+                        <img src="Img Plantas/Barril Dorado.jpg" alt="Barril Dorado">
+                        <p class="product-name">Barril Dorado</p>
                         <p class="product-price">€21,99</p>
                     </a>
-                </div>
-                <div class="recommended-item">
-                    <img src="Img Plantas/Nopal.jpg" alt="Nopal">
-                    <p class="product-name">Nopal</p>
-                    <a href="Nopal.html">
-                        <p class="product-price">€16,99</p>
+                    <a href="Cactus-Astro.html" class="recommended-item">
+                        <img src="Img Plantas/Cactus-Astro.png" alt="Cactus Astro">
+                        <p class="product-name">Cactus Astro</p>
+                        <p class="product-price">€26,99</p>
                     </a>
                 </div>
-                
             </div>
         </section>
     </div>

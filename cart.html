@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aureza - Bonsái Arce Japonés</title>
-    <link rel="icon" href="Img/LogoDoradoAureza.png">
-    <link rel="stylesheet" href="precompra-plantas.css"> 
+    <title>Carrito - Aureza</title>
+    <link rel="stylesheet" href="carrito.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Explora&family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Explora:wght@400;500;700&family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -21,58 +19,12 @@
                     <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
                     <h1 class="aureza-text">Aureza</h1>
                 </div>
-                <a href="cart.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-                        <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-                            <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
-                        </svg>
-                        <span class="visually-hidden">Carrito</span>
-                        <div class="cart-count-bubble">
-                            <span aria-hidden="true">0</span>
-                            <span class="visually-hidden">0 artículos</span>
-                        </div>
-                </a>
             </div>
         </div>
     </header>
-    
     <div class="container">
-        <!-- Producto -->
-        <section class="product-detail active">
-            <div class="product-content">
-                <img src="Img Plantas/Bonsái de Arce Japonés.jpg" alt="Bonsái de Arce Japonés">
-                <div class="product-info">
-                    <h2>Bonsái de Arce Japonés</h2>
-                    <p class="precio">€75,99 EUR</p>
-                    <p><strong>Descripción:</strong> <br> El Bonsái de Arce Japonés es apreciado por su elegante follaje que cambia de color con las estaciones. Sus hojas tienen una forma distintiva y presentan tonalidades rojas, naranjas o amarillas en otoño, añadiendo un toque vibrante a tu decoración.</p>
-                    <p><strong>Guía de Cuidado:</strong> <br> Prefiere luz indirecta brillante y un suelo bien drenado. Mantén el suelo ligeramente húmedo, pero evita el encharcamiento. Protege de temperaturas extremas y cambios bruscos de temperatura.</p>
-                    <button class="add-to-cart" data-id="403" data-name="Bonsái de Arce Japonés" data-price="75.99">Añadir al carrito</button>
-                </div>                
-            </div>            
-        </section>
-
-        <!-- Productos recomendados -->
-        <section id="recommended-products">
-            <h2>Te puede gustar</h2>
-            <div class="recommended-items">
-                <a href="Bonsái-de-Ficus.html" class="recommended-item">
-                    <img src="Img Plantas/Bonsai Ficus.jpg" alt="Bonsai de Ficus">
-                    <p class="product-name">Bonsai de Ficus</p>
-                    <p class="product-price">€45,99</p>
-                </a>
-                
-                <a href="Bonsái-de-Pino.html" class="recommended-item">
-                    <img src="Img Plantas/Bonsai-de-Pino.png" alt="Bonsái de Pino">
-                    <p class="product-name">Bonsái de Pino</p>
-                    <p class="product-price">€55,99</p>
-                </a>
-                
-                <a href="Bonsái-de-Olmo-Chino.html" class="recommended-item">
-                    <img src="Img Plantas/Bonsái de Olmo Chino.png" alt="Bonsái de Olmo Chino">
-                    <p class="product-name">Bonsái de Olmo Chino</p>
-                    <p class="product-price">€65,99</p>
-                </a>
-            </div>
-            
+        <section id="cart-items">
+            <!-- Los productos del carrito se llenarán aquí -->
         </section>
     </div>
     <!-- Botón flotante con flecha hacia atrás -->
@@ -89,7 +41,7 @@
                     </div>
                     <div class="footer-section">
                         <h3>Síguenos</h3>
-                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/Plantixa" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="footer-section">
                         <h3>Información</h3>
@@ -103,7 +55,7 @@
                 </div>
             </div>
             
-        <!-- Modales -->
+           <!-- Modales -->
         <div id="privacy-modal" class="modal">
             <div class="modal-content">
             <span class="close" id="privacy-close">&times;</span>
@@ -188,7 +140,6 @@
             </div>
         </div>
         </footer>
-        
-        <script src="scripts.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

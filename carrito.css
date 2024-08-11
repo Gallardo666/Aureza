@@ -29,18 +29,37 @@ header {
     border-bottom: #d4af37 3px solid; /* Borde dorado */
 }
 
-header h1 {
-    font-family: 'Explora', serif;
-    font-weight: 4rem;
-    font-style: normal;
-    font-size: 6rem;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #d4af37; /* Color dorado para el título */
-    text-shadow: 0 0 2.6rem #FFD700;
+.superior-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.logo {
+    width: 6rem; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantén la proporción del logo */
+    margin-right: 1rem; /* Espacio entre el logo y el texto */
+}
+
+
+/* Estilo del texto Aureza */
+.aureza-text {
+    font-family: 'Explora', serif;
+    font-size: 6rem;
+    color: #d4af37;
+    text-shadow: 0 0 2.6rem #FFD700;
+    margin-left: 2rem;
+    margin-top: -0.1rem;
+    margin-bottom: 0.9rem;
+    padding: 0;
+}
 /* Eliminando los estilos predeterminados de los enlaces */
 a {
     text-decoration: none; /* Elimina el subrayado */
@@ -115,7 +134,36 @@ button:disabled {
 .container {
     margin-bottom: 60px;
 }
-/* Estilo del modal */
+
+/* Estilo para el botón flotante */
+.floating-button {
+    position: fixed; /* Fijar el botón en la pantalla */
+    right: 3rem; /* Espacio desde el borde derecho */
+    bottom: 3rem; /* Espacio desde el borde inferior */
+    background-color: #d4af37; /* Color de fondo dorado */
+    color: #fff; /* Color del texto */
+    border-radius: 50%; /* Forma circular */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    display: flex; /* Centra el ícono dentro del botón */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 24px; /* Tamaño del ícono */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.floating-button:hover {
+    background-color: #b29b2c; /* Color de fondo al pasar el ratón */
+}
+
+.floating-button i {
+    margin: 0; /* Sin margen adicional para el ícono */
+}
+
+/* Estilos del modal */
 .modal {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -125,20 +173,40 @@ button:disabled {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(29, 28, 26, 1); /* Fondo dorado semitransparente */
+    background-color: rgba(29, 28, 26, 0.8); /* Fondo semitransparente */
 }
 
-/* Estilo del contenido del modal */
+/* Estilos del contenido del modal */
 .modal-content {
     margin: 1.6% auto; 
     padding: 20px;
-    width: 60%;
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    max-width: 900px; /* Ancho máximo */
     color: #fff; 
     border-radius: 10px; 
-    background-color: rgba(29, 28, 26, 0); 
+    background-color: rgba(29, 28, 26, 1); /* Fondo sólido */
+    position: relative; /* Necesario para posicionar el logo */
 }
 
-/* Estilo del botón de cierre */
+/* Encabezado del modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre título y logo */
+    align-items: center;
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #d4af37; /* Color dorado para el título */
+}
+
+.logo {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+/* Estilos del botón de cierre */
 .close {
     color: #aaa;
     float: right;
@@ -153,27 +221,19 @@ button:disabled {
     cursor: pointer;
 }
 
-/* Estilo para la numeración dorada */
+/* Ajustes para el contenido del modal */
 .modal-content h3 {
-    color: #DAA520; 
-    font-weight: bold; 
-    font-size: 1.3em; 
+    color: #d4af37;
 }
 
-/* Encabezados más grandes */
-.modal-content h2 {
-    font-size: 2em; 
-    color: #DAA520;
-    margin-bottom: 20px; 
-}
 .modal-content a {
-    color: #d4ade6; 
-    text-decoration: none; 
+    color: #aa6cd3; 
+    text-decoration: none;
 }
 
 .modal-content a:hover {
-    color: #d4ade6; 
-    text-decoration: underline; 
+    text-decoration: underline;
+
 }
 footer {
     background: #000; 
@@ -274,5 +334,20 @@ footer {
 
     .footer-bottom {
         margin-top: 30px;
+    }
+}
+
+@media (max-width: 530px) {
+    .aureza-text {
+        display: none; /* Oculta el texto "Aureza" en pantallas pequeñas */
+    }
+
+    .logo-title {
+        justify-content: center; /* Centra el logo cuando desaparece el texto */
+        margin-left: 1rem;
+    }
+    .product-info h2 {
+        font-size: 2.6rem; /* Aumenta el tamaño del nombre */
+        
     }
 }

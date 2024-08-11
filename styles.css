@@ -224,6 +224,7 @@ section h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
 }
 
 .product img {
@@ -246,7 +247,7 @@ section h2 {
     color: #d4af37; /* Color dorado */
 }
 
-.product p a {
+.product p {
     color: #ffffff;
     text-decoration: none; 
     font-weight: bold; 
@@ -254,9 +255,15 @@ section h2 {
     
 }
 
-.product p a:hover {
+.product p:hover {
     color: #d4af37;
     border-bottom: 2px solid #d4af37;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color del texto original */
+    display: block; /* Hace que el enlace ocupe todo el espacio de la tarjeta */
 }
 
 /* Estilo de la sección del producto */
@@ -468,7 +475,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .sobre-nosotros-content {
         flex-direction: column;
     }

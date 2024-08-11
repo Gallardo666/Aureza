@@ -16,22 +16,24 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.html"><h1>
-                <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
-                Aureza
-            </h1></a>
+            <div class="superior-header">
+                <div class="logo-title">
+                    <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
+                    <h1 class="aureza-text">Aureza</h1>
+                </div>
+                <a href="cart.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+                        <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+                            <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
+                        </svg>
+                        <span class="visually-hidden">Carrito</span>
+                        <div class="cart-count-bubble">
+                            <span aria-hidden="true">0</span>
+                            <span class="visually-hidden">0 artículos</span>
+                        </div>
+                </a>
+            </div>
         </div>
     </header>
-    <a href="/carrito.html" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        <svg class="icon icon-cart" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
-            <path fill="currentColor" fill-rule="evenodd" d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"></path>
-        </svg>
-        <span class="visually-hidden">Carrito</span>
-        <div class="cart-count-bubble">
-            <span aria-hidden="true">0</span>
-            <span class="visually-hidden">0 artículos</span>
-        </div>
-    </a>
     
     <div class="container">
         <!-- Producto -->
@@ -52,29 +54,24 @@
         <section id="recommended-products">
             <h2>Te puede gustar</h2>
             <div class="recommended-items">
-                <div class="recommended-item">
-                    <img src="Img Plantas/Bonsai Ficus.jpg" alt="Bonsai de Picus">
+                <a href="Bonsái-de-Pino.html" class="recommended-item">
+                    <img src="Img Plantas/Bonsai Ficus.jpg" alt="Bonsai de Ficus">
                     <p class="product-name">Bonsai de Ficus</p>
-                    <a href="Bonsái-de-Pino.html">
-                        <p class="product-price">€45,99</p>
-                    </a>
-                </div>
-                <div class="recommended-item">
+                    <p class="product-price">€45,99</p>
+                </a>
+            
+                <a href="Bonsái-de-Pino.html" class="recommended-item">
                     <img src="Img Plantas/Bonsai-de-Pino.png" alt="Bonsái de Pino">
                     <p class="product-name">Bonsái de Pino</p>
-                    <a href="Bonsái-de-Pino.html">
-                        <p class="product-price">€55,99</p>
-                    </a>
-                </div>
-                <div class="recommended-item">
+                    <p class="product-price">€55,99</p>
+                </a>
+            
+                <a href="Bonsái-de-Arce-Japonés.html" class="recommended-item">
                     <img src="Img Plantas/Bonsái de Arce Japonés.jpg" alt="Bonsái de Arce Japonés">
                     <p class="product-name">Bonsái de Arce Japonés</p>
-                    <a href="Bonsái-de-Arce-Japonés.html">
-                        <p class="product-price">€75,99</p>
-                    </a>
-                </div>
-                
-            </div>
+                    <p class="product-price">€75,99</p>
+                </a>
+            </div>            
         </section>
     </div>
     <!-- Botón flotante con flecha hacia atrás -->

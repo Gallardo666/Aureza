@@ -16,6 +16,21 @@ body {
     min-height: 100vh;
 }
 
+/* Eliminando los estilos predeterminados de los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* El color del enlace será el mismo que el del texto circundante */
+}
+
+a:visited {
+    color: inherit; /* Mantiene el color del enlace después de ser visitado */
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none; /* Elimina el subrayado al interactuar con el enlace */
+    color: inherit; /* Mantiene el color del enlace */
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -27,33 +42,41 @@ header {
     color: #fff; /* Texto blanco */
     padding: 20px 0;
     border-bottom: #d4af37 3px solid; /* Borde dorado */
-    position: relative; /* Necesario para la posición absoluta del carrito */
-    text-align: center
 }
 
-header .container {
-    width: 100%; /* Asegura que el contenedor del header ocupe el ancho completo */
+
+
+
+.superior-header{
     display: flex;
-    justify-content: center; /* Centra el contenido dentro del contenedor */
+    flex-direction: column;
     align-items: center;
 }
-.logo {
-    width: 6rem; /* Ajusta el tamaño del logo */
-    height: auto; /* Mantén la proporción del logo */
-    vertical-align: middle; /* Alinea verticalmente con el texto */
-    margin-right: 2rem; /* Espacio entre el logo y el texto */
-    margin-bottom: 1rem;
+
+
+.logo-title {
+    display: flex;
+    align-items: center;
 }
-header h1 {
+
+/* Estilo del logo */
+.logo {
+    width: 6rem; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantén la proporción del logo */
+    margin-right: 1rem; /* Espacio entre el logo y el texto */
+}
+
+
+/* Estilo del texto Aureza */
+.aureza-text {
     font-family: 'Explora', serif;
-    font-weight: 4rem;
-    font-style: normal;
     font-size: 6rem;
-    margin: 0;
+    color: #d4af37;
+    text-shadow: 0 0 2.6rem #FFD700;
+    margin-left: 2rem;
+    margin-top: -0.1rem;
+    margin-bottom: 0.9rem;
     padding: 0;
-    text-align: center;
-    color: #d4af37; /* Color dorado para el título */
-    text-shadow:0 0 2.6rem #FFD700;
 }
 
 
@@ -99,22 +122,6 @@ header h1 {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
-}
-
-
-/* Eliminando los estilos predeterminados de los enlaces */
-a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* El color del enlace será el mismo que el del texto circundante */
-}
-
-a:visited {
-    color: inherit; /* Mantiene el color del enlace después de ser visitado */
-}
-
-a:hover, a:focus, a:active {
-    text-decoration: none; /* Elimina el subrayado al interactuar con el enlace */
-    color: inherit; /* Mantiene el color del enlace */
 }
 
 
@@ -194,7 +201,7 @@ section h2 {
     font-weight: 600;
     font-size: 3.6rem; /* Aumenta el tamaño del nombre */
     color: #d4af37; /* Color dorado */
-    text-shadow: 0 0 5.8rem #FFD700;
+    text-shadow: 0 0 2.8rem #FFD700;
     
 }
 
@@ -257,7 +264,11 @@ section h2 {
     text-align:center;
     margin-bottom: 1rem;
 }
-
+.product-link {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color del texto original */
+    display: block; /* Hace que el enlace ocupe todo el espacio de la tarjeta */
+}
 .recommended-item img {
     width: 50%;
     height: auto;
@@ -509,4 +520,18 @@ footer {
     }
 }
 
+@media (max-width: 530px) {
+    .aureza-text {
+        display: none; /* Oculta el texto "Aureza" en pantallas pequeñas */
+    }
+
+    .logo-title {
+        justify-content: center; /* Centra el logo cuando desaparece el texto */
+        margin-left: 1rem;
+    }
+    .product-info h2 {
+        font-size: 2.6rem; /* Aumenta el tamaño del nombre */
+        
+    }
+}
 
