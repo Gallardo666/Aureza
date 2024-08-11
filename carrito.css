@@ -80,34 +80,132 @@ a:hover, a:focus, a:active {
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
-    color: #fff; /* Texto blanco */
+    color: #d4af37; /* Texto blanco */
 }
-
+/* Estilo para cada ítem del carrito */
 .cart-item {
-    background-color: #1a1a1a; /* Fondo gris oscuro para cada item del carrito */
-    color: #fff; /* Texto blanco */
-
-    padding: 15px;
-    margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+
+    margin-bottom: 3rem;
+    gap: 10px; /* Espacio entre los elementos de la columna */
 }
 
-.cart-item h3 {
+/* Contenedor principal para la fila de cada ítem */
+.cart-item-row {
+    display: flex;
+    width: 100%; /* Asegura que ocupe toda la fila horizontal */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
+}
+
+/* Contenedor para la imagen y el nombre */
+.cart-item-left {
+    max-width: 10% ;
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    gap: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+.cart-item-image-container {
+    max-width: 100px; /* Ajusta el tamaño de la imagen */
+}
+
+.cart-item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cart-item-name {
+    font-size: 1.2em;
     margin: 0;
-    font-size: 1.5rem;
 }
 
-.cart-item p {
-    margin: 0;
-    font-size: 1rem;
+/* Contenedor para la cantidad y los botones */
+.cart-item-center {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los botones y la cantidad */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del contenedor */
+    gap: 10px; /* Espacio entre los botones y la cantidad */
+    flex: 0 0 auto; /* Impide que el contenedor se expanda más allá del tamaño de su contenido */
+    min-width: 120px; /* Establece un ancho mínimo para mantener una apariencia consistente */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total del elemento */
 }
 
+/* Estilo de los botones de cantidad */
+.quantity-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #d4af37;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 4px;
+    display: flex; /* Asegura que el contenido del botón esté centrado */
+    align-items: center; /* Centra el contenido verticalmente dentro del botón */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del botón */
+    width: 36px; /* Establece un ancho fijo para los botones */
+    height: 36px; /* Establece una altura fija para los botones */
+}
+
+/* Estilo del valor de cantidad */
 .quantity {
-    font-weight: bold;
-    color: #d4af37; /* Color dorado para la cantidad */
+    font-size: 1.2em;
+    margin: 0;
+    width: 36px; /* Establece un ancho fijo para el valor de la cantidad */
+    text-align: center; /* Centra el texto dentro del span */
+    line-height: 36px; /* Alinea verticalmente el texto */
 }
+
+
+/* Contenedor para el precio total */
+.cart-item-right {
+    max-width: 10%;
+    display: flex;
+    align-items:center;
+    justify-content: right;
+    align-items: flex-end; /* Alinea el contenido a la derecha */
+}
+
+.cart-item-price {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0;
+}
+
+/* Botón de eliminar */
+.btn-remove {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #ffffff; /* Color del ícono */
+    cursor: pointer;
+    font-size: 1.5em; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-remove:hover {
+    background: none;
+    color: #220a0a; /* Color del ícono */
+}
+
+.btn-remove box-icon {
+    display: inline-block;
+    width: 24px; /* Tamaño del ícono */
+    height: 24px; /* Tamaño del ícono */
+}
+
+
 
 button {
     background-color: #d4af37; /* Color dorado para los botones */

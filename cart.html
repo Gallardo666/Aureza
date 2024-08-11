@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito - Aureza</title>
+    <link rel="icon" href="Img/LogoDoradoAureza.png">
     <link rel="stylesheet" href="carrito.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons/css/boxicons.min.css' rel='stylesheet'>
@@ -25,40 +26,41 @@
     <div class="container">
         <section id="cart-items">
             <!-- Los productos del carrito se llenarán aquí -->
+    
         </section>
     </div>
     <!-- Botón flotante con flecha hacia atrás -->
     <a href="index.html" class="floating-button" title="Volver al inicio">
         <i class="fas fa-arrow-left"></i>
     </a>
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Contacto</h3>
-                        <p>Email: aureza.01@gmail.com</p>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Síguenos</h3>
-                        <a href="https://www.instagram.com/Plantixa" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Información</h3>
-                        <a href="#sobre-nosotros">Sobre Nosotros</a>
-                        <a href="#" id="privacy-link">Política de Privacidad</a>
-                        <a href="#" id="terms-link">Términos y Condiciones</a>
-                    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: aureza.01@gmail.com</p>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Aureza. Todos los derechos reservados.</p>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <a href="https://www.instagram.com/Plantixa" class="social-icon" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <a href="#sobre-nosotros">Sobre Nosotros</a>
+                    <a href="#" id="privacy-link">Política de Privacidad</a>
+                    <a href="#" id="terms-link">Términos y Condiciones</a>
                 </div>
             </div>
-            
-           <!-- Modales -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aureza. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        
+        <!-- Modales -->
         <div id="privacy-modal" class="modal">
             <div class="modal-content">
-            <span class="close" id="privacy-close">&times;</span>
+                <span class="close" id="privacy-close">&times;</span>
                 <div class="modal-header">
                     <h2>Política de Privacidad</h2> 
                     <img src="Img/LogoDoradoAureza.png" alt="Logo Aureza" class="logo">
@@ -91,9 +93,6 @@
             </div>
         </div>
 
-            
-            
-        <!-- Modales -->
         <div id="terms-modal" class="modal">
             <div class="modal-content">
                 <span class="close" id="terms-close">&times;</span>
@@ -139,7 +138,8 @@
                 <a href="Archivos/Terminos_y_Condiciones.pdf" download>Descargar Términos y Condiciones en PDF</a>
             </div>
         </div>
-        </footer>
+    </footer>
+    <script src='https://unpkg.com/boxicons@latest/dist/boxicons.min.js'></script>
     <script src="cart.js"></script>
 </body>
 </html>

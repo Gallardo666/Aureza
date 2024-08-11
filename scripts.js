@@ -1,42 +1,51 @@
-// cart.js
+//Carrito
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cartItemsContainer = document.getElementById('cart-items');
+document.addEventListener("DOMContentLoaded", () => {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
 
-    // Cargar productos desde el almacenamiento local
-    function loadCart() {
-        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        cartItemsContainer.innerHTML = ''; // Limpiar el contenedor
-
-        cartItems.forEach(item => {
-            const itemElement = document.createElement('div');
-            itemElement.className = 'cart-item';
-            itemElement.innerHTML = `
-                <p>${item.name}</p>
-                <p>Precio: $${item.price}</p>
-                <button class="remove-btn" data-id="${item.id}">Eliminar</button>
-            `;
-            cartItemsContainer.appendChild(itemElement);
-        });
-
-        // Añadir evento para eliminar productos
-        document.querySelectorAll('.remove-btn').forEach(button => {
-            button.addEventListener('click', removeItem);
-        });
-    }
-
-    // Función para eliminar un producto
-    function removeItem(event) {
-        const id = event.target.getAttribute('data-id');
-        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        cartItems = cartItems.filter(item => item.id !== id);
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        loadCart();
-    }
-
-    // Inicializar el carrito
+    // Cargar el carrito al cargar la página
     loadCart();
 });
+
+function addToCart(event) {
+    const button = event.target;
+    const product = {
+        id: button.getAttribute('data-id'),
+        name: button.getAttribute('data-name'),
+        price: parseFloat(button.getAttribute('data-price')),
+        quantity: 1
+    };
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    const existingProductIndex = cart.findIndex(item => item.id === product.id);
+    if (existingProductIndex > -1) {
+        cart[existingProductIndex].quantity += 1;
+    } else {
+        cart.push(product);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(cart);
+
+}
+
+function loadCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    updateCartCount(cart);
+}
+
+function updateCartCount(cart) {
+    const cartCountBubble = document.querySelector('.cart-count-bubble span');
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+    cartCountBubble.textContent = totalItems;
+}
+
+
 
 
 //Desplegable Politica de Privacidad | Terminos y Condiciones

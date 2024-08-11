@@ -1,61 +1,117 @@
-// cart.js
+document.addEventListener("DOMContentLoaded", () => {
+    loadCartItems();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cartItemsContainer = document.getElementById('cart-items');
-    const cart = JSON.parse(localStorage.getItem('cart')) || {};
-
-    if (Object.keys(cart).length === 0) {
-        cartItemsContainer.innerHTML = '<p>El carrito está vacío.</p>';
-        return;
-    }
-
-    for (const [productId, details] of Object.entries(cart)) {
-        const cartItem = document.createElement('div');
-        cartItem.classList.add('cart-item');
-        cartItem.innerHTML = `
-            <div class="cart-item-image">
-                <img src="${details.image}" alt="${productId}" style="width: 100px; height: auto;" />
-            </div>
-            <div class="cart-item-info">
-                <h3>${productId}</h3>
-                <p>Cantidad:</p>
-                <button class="decrease-btn" data-product-id="${productId}">-</button>
-                <span class="quantity">${details.quantity}</span>
-                <button class="increase-btn" data-product-id="${productId}">+</button>
-            </div>
-        `;
-        cartItemsContainer.appendChild(cartItem);
-    }
-
-    // Agregar eventos para aumentar y disminuir la cantidad
-    document.querySelectorAll('.decrease-btn').forEach(button => {
-        button.addEventListener('click', () => updateQuantity(button.dataset.productId, -1));
+    document.getElementById('clear-cart').addEventListener('click', () => {
+        localStorage.removeItem('cart');
+        loadCartItems();
     });
-    document.querySelectorAll('.increase-btn').forEach(button => {
-        button.addEventListener('click', () => updateQuantity(button.dataset.productId, 1));
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.dataset.id;
+            const name = e.target.dataset.name;
+            const price = parseFloat(e.target.dataset.price);
+            const image = e.target.dataset.image;
+
+            addToCart(id, name, price, image);
+            loadCartItems();
+        });
     });
 });
 
-function updateQuantity(productId, delta) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || {};
-    
-    if (!cart[productId]) return;
+function loadCartItems() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItemsContainer.innerHTML = '';
 
-    cart[productId].quantity += delta;
-    if (cart[productId].quantity <= 0) {
-        delete cart[productId];
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+        return;
     }
 
-    if (Object.keys(cart).length === 0) {
-        localStorage.removeItem('cart');
-    } else {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-    
-    location.reload(); // Recargar la página para reflejar los cambios
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+        itemElement.innerHTML = `
+            <div class="cart-item-row" id="cart-item-${item.id}">
+                <div class="cart-item-left">
+                    <div class="cart-item-image-container">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    </div>
+                    <div class="cart-item-details">
+                        <h2 class="cart-item-name">${item.name}</h2>
+                    </div>
+                </div>
+                <div class="cart-item-center">
+                    <button class="quantity-btn" data-id="${item.id}" data-action="decrease">-</button>
+                    <span class="quantity" id="quantity-${item.id}">${item.quantity}</span>
+                    <button class="quantity-btn" data-id="${item.id}" data-action="increase">+</button>
+                    <button class="btn-remove" data-id="${item.id}"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="cart-item-right">
+                <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
+
+    // Add event listeners to the increase and decrease buttons
+    document.querySelectorAll('.quantity-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.dataset.id;
+            const action = e.target.dataset.action;
+            updateQuantity(id, action);
+        });
+    });
+
+    // Add event listeners to the remove buttons
+    document.querySelectorAll('.btn-remove').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.dataset.id;
+            removeItem(id);
+        });
+    });
 }
 
-//Desplegable Politica de Privacidad | Terminos y Condiciones
+function updateQuantity(id, action) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.map(item => {
+        if (item.id === id) {
+            if (action === 'increase') {
+                item.quantity += 1;
+            } else if (action === 'decrease') {
+                item.quantity = Math.max(item.quantity - 1, 1);
+            }
+        }
+        return item;
+    });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCartItems();
+}
+
+function removeItem(id) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.id !== id);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCartItems();
+}
+
+function addToCart(id, name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingItem = cart.find(item => item.id === id);
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ id, name, price, image, quantity: 1 });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+
+// Desplegable Política de Privacidad | Términos y Condiciones
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('privacy-link').onclick = function(event) {
         event.preventDefault();
