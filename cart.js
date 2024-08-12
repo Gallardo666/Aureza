@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const name = e.target.dataset.name;
             const price = parseFloat(e.target.dataset.price);
             const image = e.target.dataset.image;
+            const url = e.target.dataset.url; // Asegúrate de capturar la URL
 
-            addToCart(id, name, price, image);
+            addToCart(id, name, price, image, url); // Pasa la URL a la función
             loadCartItems();
         });
     });
@@ -21,26 +22,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function loadCartItems() {
     const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalContainer = document.getElementById('cart-total');
+    let total = 0;
+
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cartItemsContainer.innerHTML = '';
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
+        cartTotalContainer.innerHTML = '<p>Total: $0.00</p>';
         return;
     }
 
     cart.forEach(item => {
+        const itemTotalPrice = item.price * item.quantity;
         const itemElement = document.createElement('div');
         itemElement.classList.add('cart-item');
         itemElement.innerHTML = `
             <div class="cart-item-row" id="cart-item-${item.id}">
                 <div class="cart-item-left">
-                    <div class="cart-item-image-container">
-                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                    </div>
-                    <div class="cart-item-details">
-                        <h2 class="cart-item-name">${item.name}</h2>
-                    </div>
+                    <a href="${item.url}" class="cart-item-link" target="_blank">
+                        <div class="cart-item-image-container">
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                        </div>
+                        <div class="cart-item-details">
+                            <h2 class="cart-item-name">${item.name}</h2>
+                        </div>
+                    </a>
                 </div>
                 <div class="cart-item-center">
                     <button class="quantity-btn" data-id="${item.id}" data-action="decrease">-</button>
@@ -49,14 +57,19 @@ function loadCartItems() {
                     <button class="btn-remove" data-id="${item.id}"><i class="fas fa-trash"></i></button>
                 </div>
                 <div class="cart-item-right">
-                <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                    <p class="cart-item-price">$${itemTotalPrice.toFixed(2)}</p>
                 </div>
             </div>
         `;
         cartItemsContainer.appendChild(itemElement);
+
+        // Depuración: Verificar URL del producto
+        console.log(`Producto URL: ${item.url}`);
     });
 
-    // Add event listeners to the increase and decrease buttons
+    cartTotalContainer.innerHTML = `<p>Total: $${total.toFixed(2)}</p>`;
+
+    // Añadir listeners para botones de cantidad y eliminar
     document.querySelectorAll('.quantity-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const id = e.target.dataset.id;
@@ -65,7 +78,6 @@ function loadCartItems() {
         });
     });
 
-    // Add event listeners to the remove buttons
     document.querySelectorAll('.btn-remove').forEach(button => {
         button.addEventListener('click', (e) => {
             const id = e.target.dataset.id;
@@ -73,6 +85,7 @@ function loadCartItems() {
         });
     });
 }
+
 
 function updateQuantity(id, action) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -97,19 +110,19 @@ function removeItem(id) {
     loadCartItems();
 }
 
-function addToCart(id, name, price, image) {
+function addToCart(id, name, price, image, url) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingItem = cart.find(item => item.id === id);
 
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
-        cart.push({ id, name, price, image, quantity: 1 });
+        cart.push({ id, name, price, image, quantity: 1, url }); // Incluye la URL en el carrito
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+    loadCartItems();
 }
-
 
 // Desplegable Política de Privacidad | Términos y Condiciones
 document.addEventListener('DOMContentLoaded', function() {
